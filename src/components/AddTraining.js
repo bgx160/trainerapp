@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { useState } from 'react';
 import { DateTimeField } from '@mui/x-date-pickers/DateTimeField';
 import { LocalizationProvider } from '@mui/x-date-pickers';
