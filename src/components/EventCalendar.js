@@ -12,7 +12,7 @@ function EventCalendar() {
     const isValidTraining = (training) => {
         if (training.customer && training.activity && training.date) {
             return true;
-        } 
+        }
     }
 
     const events = data.map(training => {
@@ -23,6 +23,7 @@ function EventCalendar() {
                 end: new Date(dayjs(training.date).add(training.duration, 'minute'))
             }
         }
+        return null;
     });
 
     return (
