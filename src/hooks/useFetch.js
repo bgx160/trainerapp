@@ -16,7 +16,6 @@ function useFetch(url) {
 
     useEffect(() => fetchData, [url, fetchData]);
 
-
     return { data, error, loading, fetchData }
 }
 export default useFetch;

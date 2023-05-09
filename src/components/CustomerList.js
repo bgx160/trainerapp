@@ -20,13 +20,37 @@ function CustomerList() {
     const [msg, setMsg] = useState('');
 
     const [columnDefs] = useState([
-        { field: 'firstname', sortable: true, filter: true },
-        { field: 'lastname', sortable: true, filter: true },
-        { field: 'email', sortable: true, filter: true },
-        { field: 'phone', filter: true },
-        { cellRenderer: params => <Button startIcon={<DeleteIcon />} onClick={() => removeCustomer(params.data)} />, width: 80 },
-        { cellRenderer: params => <EditCustomer customer={params.data} editCustomer={editCustomer} />, width: 80 },
-        { cellRenderer: params => <AddTraining customer={params.data} addTraining={addTraining} />, width: 80 }
+        {
+            field: 'firstname',
+            sortable: true,
+            filter: true
+        },
+        {
+            field: 'lastname',
+            sortable: true,
+            filter: true
+        },
+        {
+            field: 'email',
+            sortable: true,
+            filter: true
+        },
+        {
+            field: 'phone',
+            filter: true
+        },
+        {
+            cellRenderer: params => <Button startIcon={<DeleteIcon />} onClick={() => removeCustomer(params.data)} />,
+            width: 80
+        },
+        {
+            cellRenderer: params => <EditCustomer customer={params.data} editCustomer={editCustomer} />,
+            width: 80
+        },
+        {
+            cellRenderer: params => <AddTraining customer={params.data} addTraining={addTraining} />,
+            width: 80
+        }
     ]);
 
     const onBtnExport = (params) => {
